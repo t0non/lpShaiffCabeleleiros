@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-dark: #2B231B;
+  --brand-primary: #905A24;
+  --brand-secondary: #8F5A42;
+  --brand-cream: #FBEDDF;
+  --brand-white: #FFFFFF;
+
+  --color-background: #FFFFFF;
+  --color-foreground: #2B231B;
+  --color-primary: #905A24;
+  --color-primary-hover: #8F5A42;
+  --color-secondary: #8F5A42;
+  --color-muted: #FBEDDF;
+  --color-border: rgba(43, 35, 27, 0.16);
+  --color-surface: #FFFFFF;
+  --color-dark-surface: #2B231B;
+  --color-heading: #2B231B;
+  --color-body-text: #2B231B;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes shimmer-slide {
+  0% {
+    transform: translateX(-200%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(300%) skewX(-25deg);
+  }
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #aa6c2b 50%, var(--color-primary-hover) 100%);
+  background-size: 200% 200%;
+  transition: all 0.4s ease;
+}
+
+.btn-shimmer:hover {
+  background-position: 100% 0;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 30%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.2) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shimmer-slide 5s infinite;
+  filter: blur(4px);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-body-text);
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Custom focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
