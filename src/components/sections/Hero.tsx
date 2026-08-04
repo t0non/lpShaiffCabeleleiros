@@ -102,20 +102,32 @@ export function Hero() {
             </p>
 
             {/* CTA */}
-            <div className="mt-8 md:mt-0">
+            <div className="mt-8 md:mt-0 flex flex-col sm:flex-row gap-3">
               <Button
                 href={siteConfig.whatsappHref || undefined}
                 external
                 variant="primary"
                 size="lg"
                 className="
-                  btn-shimmer w-auto sm:w-auto
+                  btn-shimmer w-full sm:w-auto text-center justify-center
                   !py-4 !px-7 shadow-md hover:shadow-lg hover:scale-105
                   transition-all duration-300
                 "
               >
                 <WhatsAppIcon className="w-4 h-4 mr-2 shrink-0" />
                 Agendar horário
+              </Button>
+              <Button
+                href="#promocoes"
+                variant="outline"
+                size="lg"
+                className="
+                  w-full sm:w-auto text-center justify-center
+                  !py-4 !px-7 shadow-sm hover:shadow-md hover:scale-105
+                  transition-all duration-300 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white
+                "
+              >
+                Consulte nossas promoções
               </Button>
             </div>
 

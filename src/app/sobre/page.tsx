@@ -12,7 +12,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { MapPin, ShieldCheck, HeartHandshake } from "lucide-react";
-import { GalleryPreview } from "@/components/sections/GalleryPreview";
 
 export const metadata: Metadata = {
   title: "Sobre o Salão em Santa Efigênia, BH",
@@ -134,8 +133,6 @@ export default function SobrePage() {
         </Container>
       </Section>
 
-      {/* Galeria do Espaço */}
-      <GalleryPreview />
     </>
   );
 }

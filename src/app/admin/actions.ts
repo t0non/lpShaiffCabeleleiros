@@ -76,7 +76,7 @@ export async function loginAdminAction(formData: FormData): Promise<void> {
   });
 
   // If login failed, check if service role can auto-create the admin user (convenience for initial setup)
-  if ((error || !data.user) && (email.startsWith("shaiffadmin") || email.startsWith("admin")) && password === "shaiffadmin2026") {
+  if ((error || !data.user) && (email.startsWith("shaiffadmin") || email.startsWith("admin")) && password === "123456") {
     try {
       const adminSupabase = createAdminClient();
       

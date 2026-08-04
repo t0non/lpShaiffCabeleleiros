@@ -1,15 +1,17 @@
+"use client";
+
 import React from "react";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const brands = [
-  { name: "L'Oréal", subtitle: "Professionnel Paris" },
-  { name: "Joico", subtitle: "The Art of Healthy Hair" },
-  { name: "Wella", subtitle: "Professionals" },
-  { name: "Sebastian", subtitle: "Professional" },
-  { name: "Keune", subtitle: "Haircosmetics" },
-  { name: "Med", subtitle: "For Hair & Beauty" },
+  { name: "L'Oréal", subtitle: "Professionnel Paris", logo: "/images/loreal.png" },
+  { name: "Joico", subtitle: "The Art of Healthy Hair", logo: "/images/joico.png" },
+  { name: "Wella", subtitle: "Professionals", logo: "/images/wella.png" },
+  { name: "Sebastian", subtitle: "Professional", logo: "/images/sebastina.png" },
+  { name: "Keune", subtitle: "Haircosmetics", logo: "/images/keune.png" },
+  { name: "Med", subtitle: "For Hair & Beauty", logo: "/images/med.png" },
 ];
 
 export function TreatmentLines() {
@@ -23,18 +25,28 @@ export function TreatmentLines() {
           align="center"
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12 mt-12 items-center justify-items-center">
           {brands.map((brand, index) => (
             <div
               key={index}
-              className="bg-[#FAF6F0] p-6 rounded-2xl border border-brand-border/40 shadow-xs flex flex-col items-center justify-center text-center transition-all duration-300 hover:scale-105 hover:shadow-md hover:border-brand-primary/40 group"
+              className="w-full flex flex-col items-center justify-center group h-28 transition-all duration-300"
             >
-              <span className="font-heading text-2xl font-light tracking-widest text-brand-dark group-hover:text-brand-primary transition-colors">
-                {brand.name}
-              </span>
-              <span className="text-[9px] uppercase tracking-wider text-brand-bodyText/60 mt-1 block">
-                {brand.subtitle}
-              </span>
+              <div className="h-20 w-full flex items-center justify-center relative">
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="max-h-full max-w-[95%] object-contain transition-transform duration-300 group-hover:scale-105"
+                  onError={(e) => {
+                    // Fallback to text if image fails to load
+                    (e.target as HTMLElement).style.display = "none";
+                    const textNode = (e.target as HTMLElement).nextElementSibling;
+                    if (textNode) textNode.classList.remove("hidden");
+                  }}
+                />
+                <span className="hidden font-heading text-lg font-medium tracking-widest text-brand-dark group-hover:text-brand-primary transition-colors">
+                  {brand.name}
+                </span>
+              </div>
             </div>
           ))}
         </div>

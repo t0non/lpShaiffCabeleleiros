@@ -3,9 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/config/site";
-import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function ServicesOverview() {
   return (
@@ -51,20 +49,6 @@ export function ServicesOverview() {
               </div>
             </Link>
           ))}
-        </div>
-
-        {/* Centralized CTA button - 1 of our 3 main CTAs on the page */}
-        <div className="mt-12 text-center">
-          <Button
-            href={siteConfig.whatsappHref || undefined}
-            external
-            variant="primary"
-            size="lg"
-            className="transition-all duration-300 hover:scale-105 shadow-md btn-shimmer"
-          >
-            <WhatsAppIcon className="w-5 h-5 mr-2 shrink-0" />
-            <span>Consultar Valores e Agendar Horário</span>
-          </Button>
         </div>
       </Container>
     </Section>
