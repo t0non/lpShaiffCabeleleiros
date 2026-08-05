@@ -21,7 +21,7 @@ export function PromotionCard({ combo, isPreview = false }: PromotionCardProps) 
   const benefits = Array.isArray(combo.benefits) ? combo.benefits : [];
   const endsAt = combo.ends_at;
   const ctaLabel = combo.cta_label || "Solicitar agendamento";
-  const ctaUrl = isPreview ? "#" : `https://wa.me/553135640123?text=Olá!%20Gostaria%20de%20reservar%20o%20combo%20${encodeURIComponent(title)}%20no%20valor%20de%20${formatCurrencyBRL(promotionalPrice)}.`;
+  const ctaUrl = isPreview ? "#" : `https://wa.me/5531984435409?text=Olá!%20Gostaria%20de%20reservar%20o%20combo%20${encodeURIComponent(title)}%20no%20valor%20de%20${formatCurrencyBRL(promotionalPrice)}.`;
   const imageUrl = combo.image_url;
 
   return (
@@ -114,11 +114,11 @@ export function PromotionCard({ combo, isPreview = false }: PromotionCardProps) 
         <Button
           href={ctaUrl}
           variant="primary"
-          size="sm"
-          className="w-full text-xs justify-center"
+          size="md"
+          className="w-full text-sm font-semibold justify-center py-3.5 shadow-md hover:shadow-lg transition-all"
         >
           <span>{ctaLabel}</span>
-          <ArrowRight className="w-3.5 h-3.5 ml-1" />
+          <ArrowRight className="w-4 h-4 ml-1.5" />
         </Button>
       </div>
     </div>

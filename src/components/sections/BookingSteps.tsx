@@ -82,7 +82,7 @@ export function BookingSteps() {
 
         <div className="mt-10 text-center">
           <Button
-            href="https://wa.me/553135640123?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Shaiff%20Cabeleireiros%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+            href="https://wa.me/5531984435409?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Shaiff%20Cabeleireiros%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
             external
             variant="primary"
             size="lg"

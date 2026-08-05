@@ -6,9 +6,9 @@ export const siteConfig: SiteConfig = {
   description:
     "Salão de beleza e cabeleireiro no Condomínio Edifício Angelini Center, no bairro Santa Efigênia em Belo Horizonte - MG.",
   telephone: "(31) 3564-0123",
-  telephoneHref: "tel:+553135640123",
+  telephoneHref: "tel:+5531984435409",
   whatsappNumber: "(31) 3564-0123",
-  whatsappHref: "https://wa.me/553135640123?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Shaiff%20Cabeleireiros%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20[nome%20do%20servi%C3%A7o].",
+  whatsappHref: "https://wa.me/5531984435409?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Shaiff%20Cabeleireiros%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20[nome%20do%20servi%C3%A7o].",
   address: "R. Padre Rolim, 715",
   building: "Condomínio Edifício Angelini Center",
   neighborhood: "Santa Efigênia",

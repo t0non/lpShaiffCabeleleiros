@@ -115,7 +115,7 @@ export async function StoreSection() {
 
               <div className="px-6 pb-6 pt-2">
                 <Button
-                  href={`https://wa.me/553135640123?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20ou%20saber%20mais%20detalhes%20sobre%20o%20produto%20${encodeURIComponent(product.name)}%20no%20valor%20de%20R$%20${product.price.toFixed(2)}.`}
+                  href={`https://wa.me/5531984435409?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20ou%20saber%20mais%20detalhes%20sobre%20o%20produto%20${encodeURIComponent(product.name)}%20no%20valor%20de%20R$%20${product.price.toFixed(2)}.`}
                   external
                   variant="outline"
                   size="md"

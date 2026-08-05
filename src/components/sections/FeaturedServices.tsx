@@ -57,7 +57,7 @@ export function FeaturedServices() {
                 <div className="px-6 pb-6 pt-2">
                    <div className="pt-3 border-t border-brand-border/40">
                   <Button
-                    href={`https://wa.me/553135640123?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Shaiff%20Cabeleireiros%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20${encodeURIComponent(service.name)}.`}
+                    href={`https://wa.me/5531984435409?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Shaiff%20Cabeleireiros%20e%20gostaria%20de%20consultar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20${encodeURIComponent(service.name)}.`}
                     external
                     variant="primary"
                     size="md"
