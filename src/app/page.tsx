@@ -17,6 +17,8 @@ import { QuickContact } from "@/components/sections/QuickContact";
 import { StoreSection } from "@/components/sections/StoreSection";
 import { TreatmentLines } from "@/components/sections/TreatmentLines";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Salão de Beleza em Santa Efigênia, BH",
   description:
