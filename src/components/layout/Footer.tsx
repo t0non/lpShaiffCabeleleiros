@@ -59,7 +59,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/sobre"
+                  href="#sobre"
                   className="text-brand-bodyText/80 hover:text-brand-primary transition-colors"
                 >
                   Sobre o Salão
@@ -67,7 +67,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contato"
+                  href="#contato"
                   className="text-brand-bodyText/80 hover:text-brand-primary transition-colors"
                 >
                   Contato & Localização
@@ -93,7 +93,7 @@ export function Footer() {
               {featuredServices.map((service) => (
                 <li key={service.id}>
                   <Link
-                    href={`/servicos/${service.slug}`}
+                    href="#servicos"
                     className="text-brand-bodyText/80 hover:text-brand-primary transition-colors"
                   >
                     {service.name}

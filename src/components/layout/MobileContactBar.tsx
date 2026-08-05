@@ -23,10 +23,12 @@ export function MobileContactBar() {
         </a>
 
         <a
-          href="/contato"
+          href={siteConfig.whatsappHref || undefined}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => trackEvent("click_schedule", { location: "mobile_contact_bar" })}
           className="flex items-center justify-center gap-2 py-2.5 px-4 bg-brand-primary hover:bg-brand-primaryHover text-white font-medium text-sm rounded-lg shadow-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
-          aria-label="Ir para agendamento de horário"
+          aria-label="Falar com o salão no WhatsApp"
         >
           <Calendar className="w-4 h-4" />
           <span>Agendar</span>

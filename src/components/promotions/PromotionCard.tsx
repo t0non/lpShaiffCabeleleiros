@@ -4,6 +4,7 @@ import { PromotionalCombo } from "@/types/promotion";
 import { formatCurrencyBRL, formatBRDateTime } from "@/lib/promotions";
 import { Check, Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { siteConfig } from "@/config/site";
 
 interface PromotionCardProps {
   combo: Partial<PromotionalCombo>;
@@ -20,7 +21,7 @@ export function PromotionCard({ combo, isPreview = false }: PromotionCardProps) 
   const benefits = Array.isArray(combo.benefits) ? combo.benefits : [];
   const endsAt = combo.ends_at;
   const ctaLabel = combo.cta_label || "Solicitar agendamento";
-  const ctaUrl = isPreview ? "#" : `/contato?combo=${encodeURIComponent(slug)}`;
+  const ctaUrl = isPreview ? "#" : `https://wa.me/553135640123?text=Olá!%20Gostaria%20de%20reservar%20o%20combo%20${encodeURIComponent(title)}%20no%20valor%20de%20${formatCurrencyBRL(promotionalPrice)}.`;
   const imageUrl = combo.image_url;
 
   return (
