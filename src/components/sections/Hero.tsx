@@ -62,8 +62,8 @@ export function Hero() {
       />
 
       {/* ── Z-30: Conteúdo principal (textos + CTA) ───────────────── */}
-      <div className="relative z-30 flex-1 flex items-start md:items-center">
-        <div className="w-full h-full px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-14 md:py-20 pb-10 md:pb-0 flex flex-col md:block">
+      <div className="relative z-30 flex-1 w-full h-full flex flex-col md:justify-center">
+        <div className="w-full flex-1 md:flex-none px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-14 md:py-20 pb-12 md:pb-0 flex flex-col md:block">
           <div
             className="
               flex flex-col gap-5 flex-1 md:flex-none h-full md:h-auto
