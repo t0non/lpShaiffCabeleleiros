@@ -6,12 +6,12 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const brands = [
-  { name: "L'Oréal", subtitle: "Professionnel Paris", logo: "/images/loreal.png" },
-  { name: "Joico", subtitle: "The Art of Healthy Hair", logo: "/images/joico.png" },
-  { name: "Wella", subtitle: "Professionals", logo: "/images/wella.png" },
-  { name: "Sebastian", subtitle: "Professional", logo: "/images/sebastina.png" },
-  { name: "Keune", subtitle: "Haircosmetics", logo: "/images/keune.png" },
-  { name: "Med", subtitle: "For Hair & Beauty", logo: "/images/med.png" },
+  { name: "L'Oréal", subtitle: "Professionnel Paris", logo: "/images/loreal.png", scale: 1.15 },
+  { name: "Joico", subtitle: "The Art of Healthy Hair", logo: "/images/joico.png", scale: 0.95 },
+  { name: "Wella", subtitle: "Professionals", logo: "/images/wella.png", scale: 0.90 },
+  { name: "Sebastian", subtitle: "Professional", logo: "/images/sebastina.png", scale: 0.85 },
+  { name: "Keune", subtitle: "Haircosmetics", logo: "/images/keune.png", scale: 1.40 },
+  { name: "Med", subtitle: "For Hair & Beauty", logo: "/images/med.png", scale: 0.60 },
 ];
 
 export function TreatmentLines() {
@@ -31,11 +31,12 @@ export function TreatmentLines() {
               key={index}
               className="w-full flex flex-col items-center justify-center group h-28 transition-all duration-300"
             >
-              <div className="h-20 w-full flex items-center justify-center relative">
+              <div className="h-20 w-full flex items-center justify-center relative transition-transform duration-300 group-hover:scale-105">
                 <img
                   src={brand.logo}
                   alt={brand.name}
-                  className="max-h-full max-w-[95%] object-contain transition-transform duration-300 group-hover:scale-105"
+                  style={{ transform: `scale(${brand.scale})` }}
+                  className="max-h-full max-w-[95%] object-contain transition-all duration-300"
                   onError={(e) => {
                     // Fallback to text if image fails to load
                     (e.target as HTMLElement).style.display = "none";
