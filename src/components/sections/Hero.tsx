@@ -124,7 +124,7 @@ export function Hero() {
                 className="
                   w-full sm:w-auto text-center justify-center
                   !py-4 !px-7 shadow-sm hover:shadow-md hover:scale-105
-                  transition-all duration-300 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white
+                  transition-all duration-300 border-brand-primary text-brand-primary bg-white/95 backdrop-blur-sm hover:bg-brand-primary hover:text-white
                 "
               >
                 Consulte nossas promoções
