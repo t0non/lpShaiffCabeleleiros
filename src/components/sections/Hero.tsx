@@ -8,7 +8,7 @@ export function Hero() {
     <section
       id="inicio"
       className="relative overflow-hidden bg-white border-b border-brand-border/60"
-      style={{ minHeight: "clamp(640px, 92vh, 860px)" }}
+      style={{ minHeight: "clamp(680px, 95vh, 900px)" }}
     >
       {/* ── Z-0: Background do salão ──────────────────────────────── */}
       <div
@@ -63,10 +63,10 @@ export function Hero() {
 
       {/* ── Z-30: Conteúdo principal (textos + CTA) ───────────────── */}
       <div className="relative z-30 h-full flex items-start md:items-center">
-        <div className="w-full px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-14 md:py-20 pb-0">
+        <div className="w-full h-full px-5 sm:px-8 md:px-12 lg:px-16 xl:px-20 pt-14 md:py-20 pb-10 md:pb-0 flex flex-col md:block">
           <div
             className="
-              flex flex-col gap-5
+              flex flex-col gap-5 flex-1 md:flex-none
               w-full md:max-w-[50%] lg:max-w-[46%]
               animate-in fade-in slide-in-from-bottom-6 duration-700
             "
@@ -102,7 +102,7 @@ export function Hero() {
             </p>
 
             {/* CTA */}
-            <div className="mt-8 md:mt-0 flex flex-col sm:flex-row gap-3">
+            <div className="mt-auto md:mt-8 pt-10 md:pt-0 flex flex-col sm:flex-row gap-3">
               <Button
                 href={siteConfig.whatsappHref || undefined}
                 external
@@ -130,9 +130,6 @@ export function Hero() {
                 Consulte nossas promoções
               </Button>
             </div>
-
-            {/* Spacer para mobile — empurra o card google pra baixo via absolute */}
-            <div className="block md:hidden h-32" aria-hidden="true" />
           </div>
         </div>
       </div>
