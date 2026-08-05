@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -18,10 +17,9 @@ export function ServicesOverview() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {siteConfig.services.map((service) => (
-            <Link
+            <div
               key={service.id}
-              href={`/servicos/${service.slug}`}
-              className="bg-white rounded-2xl border border-brand-border/60 shadow-sm flex flex-col justify-between hover:border-brand-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+              className="bg-white rounded-2xl border border-brand-border/60 shadow-sm flex flex-col justify-between hover:border-brand-primary/40 hover:shadow-md transition-all duration-300 group overflow-hidden"
             >
               <div className="flex flex-col flex-1">
                 <div className="relative w-full aspect-[16/9] bg-brand-muted overflow-hidden">
@@ -38,16 +36,13 @@ export function ServicesOverview() {
                   </div>
                 </div>
 
-                <div className="p-5 pb-5 flex-1">
-                  <p className="text-xs text-brand-bodyText/80 leading-relaxed mb-2">
+                <div className="p-5 pb-6 flex-1">
+                  <p className="text-xs text-brand-bodyText/80 leading-relaxed font-sans">
                     {service.shortDescription}
                   </p>
-                  <span className="text-xs font-semibold text-brand-primary group-hover:underline block mt-3">
-                    Saiba mais &rarr;
-                  </span>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </Container>
